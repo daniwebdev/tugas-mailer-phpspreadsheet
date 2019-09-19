@@ -2,20 +2,21 @@
 /* 
 | Author    : Muhamad Yusup Hamdani
 | Mail      : me@dani.work
-| 
+|
 | Collage   : STIKOM BINANIAGA
 | NPM       : 14177063
 |
 | Filename  : Koneksi.php
-| 
+|
 */
+
 if(!isset($BASE_PATH)) {
     require 'config.php';
 }
-
 require $BASE_PATH.'vendor/autoload.php';
 
 use Illuminate\Database\Capsule\Manager as Capsule;
+
 $capsule = new Capsule;
 
 $capsule->addConnection([
