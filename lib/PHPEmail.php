@@ -7,9 +7,10 @@
 | Collage   : STIKOM BINANIAGA
 | NPM       : 14177063
 |
-| Filename  : PHPMailer_lib.php
+| Filename  : PHPMailer.php
 | 
 */
+
 require 'vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -23,7 +24,11 @@ class PHPEmail {
     public $to;
     public $toName;
 
-    function __construct()
+    public $smtp_user;
+    public $smtp_pass;
+
+
+    function __construct($user, $pass)
     {
         $this->mail = new PHPMailer(true);
         try {
@@ -34,8 +39,8 @@ class PHPEmail {
             $this->mail->SMTPAuth   = true;                                   // Enable SMTP authentication
             
             // Untuk Gmail aktifkan LessSecureApps di : https://myaccount.google.com/u/0/lesssecureapps?pli=1
-            $this->mail->Username   = 'dani.webdev@gmail.com';                     // SMTP username
-            $this->mail->Password   = '@daniwebdev)';                               // SMTP password
+            $this->mail->Username   = $user;                     // SMTP username
+            $this->mail->Password   = $pass;                               // SMTP password
             
             $this->mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
             $this->mail->Port       = 587;                                    // TCP port to connect to

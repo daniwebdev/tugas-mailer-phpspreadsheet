@@ -9,6 +9,9 @@
 | Filename  : Koneksi.php
 | 
 */
+if(!isset($BASE_PATH)) {
+    require 'config.php';
+}
 
 require $BASE_PATH.'vendor/autoload.php';
 

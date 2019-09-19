@@ -35,8 +35,8 @@ $send               = $excel->excel_from_array($data, $header);
 
 if($send) {
 
-    $email      = new PHPEmail();
-    
+    $email      = new PHPEmail($SMTP_USER, $SMTP_PASS);
+
     $email->from        = 'daniwebdev@gmail.com';
     $email->fromName    = 'Muhamad Yusup Hamdani';
     $email->to          = 'me@dani.work';

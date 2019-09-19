@@ -7,7 +7,7 @@
 | Collage   : STIKOM BINANIAGA
 | NPM       : 14177063
 |
-| Filename  : PHPExcel_lib.php
+| Filename  : PHPExcel.php
 | 
 */
 
